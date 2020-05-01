@@ -94,7 +94,7 @@ fun brickPasses(a: Int, b: Int, c: Int, r: Int, s: Int): Boolean {
 
     if (a < b) {
         brickWidth = a
-        brickHeight = if (b < c) b else a
+        brickHeight = if (b < c) b else c
     } else {
         brickWidth = b
         brickHeight = if (a < c) a else c

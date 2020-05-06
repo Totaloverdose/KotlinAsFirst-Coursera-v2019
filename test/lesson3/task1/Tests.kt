@@ -60,6 +60,7 @@ class Tests {
         assertEquals(1, digitCountInNumber(510, 5))
         assertEquals(3, digitCountInNumber(4784041, 4))
         assertEquals(4, digitCountInNumber(5373393, 3))
+        assertEquals(2, digitCountInNumber(-823577, 7))
     }
 
     @Test
@@ -71,6 +72,7 @@ class Tests {
         assertEquals(2, digitNumber(99))
         assertEquals(3, digitNumber(123))
         assertEquals(10, digitNumber(Int.MAX_VALUE))
+        assertEquals(1, digitNumber(-7))
     }
 
     @Test
@@ -84,8 +86,11 @@ class Tests {
         assertEquals(102334155, fib(40))
         assertEquals(1134903170, fib(45))
         assertEquals(1836311903, fib(46))
+        assertEquals(0, fib(0))
+        assertEquals(0, fib(-1))
         // Just to calculate it
         fib(50)
+        fib(100)
     }
 
     @Test
@@ -139,6 +144,12 @@ class Tests {
         assertFalse(isCoPrime(37, 111))
         assertTrue(isCoPrime(1234567890, 908765431))
         assertTrue(isCoPrime(2109876543, 1234567891))
+
+        var count = 0
+        for (i in 2..100)
+            if (isCoPrime(i, 100))
+                count++
+        assertEquals(39, count)
     }
 
     @Test

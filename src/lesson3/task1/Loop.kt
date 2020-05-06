@@ -161,6 +161,9 @@ fun isCoPrime(m: Int, n: Int): Boolean {
     var num1 = m
     var num2 = n
 
+    if ((m == 1) or (n == 1))
+        return true
+
     while(abs(num1 - num2) != 1) {
         if (num1 > num2) {
             if (num1 % num2 == 0)

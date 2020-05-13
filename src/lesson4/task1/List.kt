@@ -520,7 +520,7 @@ fun numToRussianWords(hundreds: Int, dozens: Int, units: Int, isThousands: Boole
         }
         dozens > 0 -> {
             resultString += numToRussianWord(dozens, 2)
-            resultString += ' '
+            if (units != 0) resultString += ' '
             resultString += numToRussianWord(units, 3, isThousands)
         }
         else -> {

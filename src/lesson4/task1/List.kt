@@ -531,7 +531,7 @@ fun numToRussianWords(hundreds: Int, dozens: Int, units: Int, isThousands: Boole
     }
 
     if (isThousands && (hundreds != 0 || dozens != 0 || units != 0)) {
-        if (dozens == 1 || units == 0) {
+        if (dozens == 1 || units == 0 || units >= 5) {
             resultString += " тысяч"
         } else if (units == 1){
             resultString += " тысяча"

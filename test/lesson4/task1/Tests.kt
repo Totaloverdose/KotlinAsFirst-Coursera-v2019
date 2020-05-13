@@ -265,5 +265,6 @@ class Tests {
         assertEquals("", numToRussianWords(0, 0, 0, true))
         assertEquals("сто тысяч", numToRussianWords(1, 0, 0, true))
         assertEquals("десять", numToRussianWords(0, 1, 0))
+        assertEquals("сто двадцать восемь тысяч", numToRussianWords(1, 2, 8, true))
     }
 }

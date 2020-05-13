@@ -453,7 +453,7 @@ fun numToRussianWord(digit: Int, type: Int, isThousands: Boolean = false): Strin
                 5 -> "пятьсот"
                 6 -> "шестьсот"
                 7 -> "семьсот"
-                8 -> "осемьсот"
+                8 -> "восемьсот"
                 9 -> "девятьсот"
                 else -> ""
             }

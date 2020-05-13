@@ -239,4 +239,31 @@ class Tests {
         assertEquals("девятьсот тысяч", russian(900000))
         assertEquals("двенадцать", russian(12))
     }
+
+    @Test
+    fun numToRussianWord() {
+        assertEquals("один", numToRussianWord(1, 3))
+        assertEquals("девять",numToRussianWord(9, 3))
+        assertEquals("десять", numToRussianWord(1, 2))
+        assertEquals("девяносто", numToRussianWord(9, 2))
+        assertEquals("сто", numToRussianWord(1, 1))
+        assertEquals("девятьсот", numToRussianWord(9, 1))
+        assertEquals("одиннадцать", numToRussianWord(11, 4))
+        assertEquals("девятнадцать", numToRussianWord(19, 4))
+    }
+
+    @Test
+    fun numToRussianWords() {
+        assertEquals("один", numToRussianWords(0, 0, 1))
+        assertEquals("одна тысяча", numToRussianWords(0, 0, 1, true))
+        assertEquals("одиннадцать", numToRussianWords(0, 1, 1))
+        assertEquals("одиннадцать тысяч", numToRussianWords(0, 1, 1, true))
+        assertEquals("двести двадцать один", numToRussianWords(2, 2, 1))
+        assertEquals("двести двадцать одна тысяча", numToRussianWords(2, 2, 1, true))
+        assertEquals("двадцать две тысячи", numToRussianWords(0, 2, 2, true))
+        assertEquals("", numToRussianWords(0, 0, 0))
+        assertEquals("", numToRussianWords(0, 0, 0, true))
+        assertEquals("сто тысяч", numToRussianWords(1, 0, 0, true))
+        assertEquals("десять", numToRussianWords(0, 1, 0))
+    }
 }
